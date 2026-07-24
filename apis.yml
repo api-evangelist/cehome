@@ -1,7 +1,20 @@
 aid: cehome
 name: cehome
-description: cehome is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  cehome (铁甲工程机械网, "Tiejia") is a Chinese digital platform for the construction
+  and engineering machinery industry, operated at cehome.com and m.cehome.com. It is a
+  professional information hub and community serving equipment owners, operators, dealers,
+  and manufacturers: industry news and price data, product reviews, buying guides and
+  detailed product listings across brands (Sany, Caterpillar, Komatsu, Doosan, and others)
+  and equipment types (excavators, loaders, bulldozers, cranes), a used-machinery
+  marketplace, operator job listings, and the active 铁甲论坛 community forum. cehome is a
+  consumer/community web platform rather than an API provider; it publishes no public
+  developer portal, OpenAPI, or programmatic API surface. It was surfaced as a portfolio
+  company of the venture firm Qiming and added to the API Evangelist network for enrichment.
+x-enrichment-note: >-
+  2026-07-18 enrichment pass — no public API/developer/OpenAPI surface; all /.well-known/*,
+  llms.txt, and legal paths soft-redirect (302) to m.cehome.com. Only real signals captured:
+  probed domain security and identity hygiene. No fabricated artifacts.
 url: https://raw.githubusercontent.com/api-evangelist/cehome/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +22,31 @@ x-backed-by:
 - qiming
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://m.cehome.com/resources/img/logo.png
 tags:
 - Company
+- Construction Machinery
+- Heavy Equipment
+- Engineering Machinery
+- Marketplace
+- Used Equipment
+- Community
+- Industry News
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +54,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/cehome-domain-security.yml
 - type: Website
-  url: https://cehome.com
+  url: https://www.cehome.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
